@@ -12,6 +12,14 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashPage(),
+        '/login': (context) => const LoginPage(),
+        '/beranda': (context) => const BerandaPage(),
+      },
+    );
   }
 }
