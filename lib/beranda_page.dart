@@ -11,7 +11,7 @@ class BerandaPage extends StatefulWidget {
 class _BerandaPageState extends State<BerandaPage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _page = [
+  final List<Widget> _pages = [
     const BerandaContent(),
     Center(child: Text('Pesanan')),
     Center(child: Text('Profil akun')),
@@ -60,12 +60,12 @@ class BerandaContent extends StatelessWidget {
   const BerandaContent({super.key});
 
   @override
-  Widget @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,children: [
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           const Center(
             child: Padding(
               padding: EdgeInsets.only(top: 20.0, bottom: 8), 
@@ -73,7 +73,7 @@ class BerandaContent extends StatelessWidget {
                 '"Pahit Kopi, manisnya ngobrol bareng kamu."', 
               style: TextStyle(
                 fontStyle: FontStyle.italic,
-                color: Color.black87,
+                color: Colors.black87,
               ),
             ),
           ),
@@ -91,46 +91,46 @@ class BerandaContent extends StatelessWidget {
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
               children: [
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_1.png", 
+                  "assets/image/kopi_1.png",
                   "COFFE CUP"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_2.png", 
+                  "assets/image/kopi_2.png",
                   "WHITE COFFE TEA"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_3.png", 
+                  "assets/image/kopi_3.png",
                   "COFFE CARAMEL"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_4.png", 
+                  "assets/image/kopi_4.png",
                   "BLACK COFFE"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_5.png", 
+                  "assets/image/kopi_5.png",
                   "COFFE MILK"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_6.png", 
+                  "assets/image/kopi_6.png",
                   "COFFE LATTE"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_7.png", 
+                  "assets/image/kopi_7.png",
                   "COFFE ESPRESSO"
                   ),
-                buildMenuCard(
+                buildMenucard(
                   context, 
-                  "assets/image/kopi_8.png", 
+                  "assets/image/kopi_8.png",
                   "ICE COFFE MATCHA"
-                ),
+                  ),
               ],
             ),
           ),
@@ -143,7 +143,7 @@ class BerandaContent extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-          contex,
+          context,
           MaterialPageRoute(
             builder: 
               (context) => DetailPage(title: title, imagePath: imagePath),

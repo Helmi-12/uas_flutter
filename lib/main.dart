@@ -7,12 +7,12 @@ void main() {
   runApp(const MainApp());
 }
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {

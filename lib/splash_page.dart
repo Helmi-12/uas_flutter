@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
   @override
-  state<SplashPage> createState() => _SplashPageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
 class _SplashPageState extends State<SplashPage> {
@@ -13,7 +13,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigatior.pushReplancementNamed(context, '/login')
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 
@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff432B14),
-      body: center(child: image.asset('assets/image/coffe.png', width: 150)),
+      body: Center(child: Image.asset('assets/image/coffe.png', width: 150)),
     );
   }
 }

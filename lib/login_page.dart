@@ -33,7 +33,6 @@ class _LoginPageState extends State<LoginPage> {
   bool _isChecked = false;
 
   @override
-  Widget @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF432B14),
@@ -61,11 +60,11 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: Color.white,
+                    color: Colors.white,
                   ),
                 ),
               ),
-            )
+            ),
 
             const SizedBox(height: 20),
 
@@ -78,11 +77,11 @@ class _LoginPageState extends State<LoginPage> {
                   'Email',
                   style: TextStyle(
                     fontSize: 15,
-                    color: Color.white,
+                    color: Colors.white,
                   ),
                 ),
               ),
-            )
+            ),
 
             const SizedBox(height: 8),
 
@@ -102,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ),
               ),
-            )
+            ),
 
             const SizedBox(height: 10),
 
@@ -134,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                              TextSpan(
                               text: 'Syarat, ketentuan',
-                              style: TextStyle(color: Colors.(0xFFF44336)),
+                              style: TextStyle(color: Color(0xFFF44336)),
                             ),
                              TextSpan(
                               text: ', dan',
@@ -175,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                         const SnackBar(
                           content: Text('Silahkan isi Email dan setujui syarat dan ketentuan.'),
                         ),
-                      ),
+                      );
                     }
                   },
 
@@ -195,8 +194,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-              )
-
+              ),
+            ),
 
               const SizedBox(height: 20),
 
@@ -216,7 +215,7 @@ class _LoginPageState extends State<LoginPage> {
                     onTap: () {
 
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: text ('Login dengan Google belom tersedia.')),
+                        const SnackBar(content: Text ('Login dengan Google belom tersedia.')),
                       );
                     },
                     child: Image.asset(
@@ -234,14 +233,15 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                     child: Image.asset(
-                      'assets/image/facebook.png'
-                    height: 35,
+                      'assets/image/facebook.png',
                     width: 35,
+                    height: 35,
                     ),
                   ),
                 ],
               ),
 
+              
           ],
         ),
       ),
