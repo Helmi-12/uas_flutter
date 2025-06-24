@@ -41,15 +41,9 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const SizedBox(height: 40),
 
-            Center(
-              child: Image.asset(
-                'assets/image/coffe.png',
-                height: 200,
-              ),
-            ),
+            Center(child: Image.asset('assets/image/coffe.png', height: 200)),
 
             const SizedBox(height: 30),
-
 
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -68,26 +62,21 @@ class _LoginPageState extends State<LoginPage> {
 
             const SizedBox(height: 20),
 
-
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Email',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(fontSize: 15, color: Colors.white),
                 ),
               ),
             ),
 
             const SizedBox(height: 8),
 
-
             Padding(
-              padding:const EdgeInsets.symmetric(horizontal: 24.0),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: TextField(
                 controller: _phoneControleer,
                 keyboardType: TextInputType.phone,
@@ -98,13 +87,12 @@ class _LoginPageState extends State<LoginPage> {
                   fillColor: const Color(0xFFFBE2C2),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                  )
+                  ),
                 ),
               ),
             ),
 
             const SizedBox(height: 10),
-
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -112,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Checkbox(
-                    value: _isChecked, 
+                    value: _isChecked,
                     onChanged: (val) {
                       setState(() {
                         _isChecked = val ?? false;
@@ -131,19 +119,19 @@ class _LoginPageState extends State<LoginPage> {
                               text: 'Saya menyetujui',
                               style: TextStyle(color: Colors.white),
                             ),
-                             TextSpan(
+                            TextSpan(
                               text: 'Syarat, ketentuan',
                               style: TextStyle(color: Color(0xFFF44336)),
                             ),
-                             TextSpan(
+                            TextSpan(
                               text: ', dan',
                               style: TextStyle(color: Colors.white),
                             ),
-                             TextSpan(
+                            TextSpan(
                               text: 'privasi',
                               style: TextStyle(color: Colors.red),
                             ),
-                             TextSpan(
+                            TextSpan(
                               text: 'Cookie',
                               style: TextStyle(color: Colors.white),
                             ),
@@ -158,7 +146,6 @@ class _LoginPageState extends State<LoginPage> {
 
             const SizedBox(height: 20),
 
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: SizedBox(
@@ -172,20 +159,21 @@ class _LoginPageState extends State<LoginPage> {
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
-                          content: Text('Silahkan isi Email dan setujui syarat dan ketentuan.'),
+                          content: Text(
+                            'Silahkan isi Email dan setujui syarat dan ketentuan.',
+                          ),
                         ),
                       );
                     }
                   },
 
-
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFBE2C2),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)
-                    )
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                   child: const Text(
+                  child: const Text(
                     'MASUK',
                     style: TextStyle(
                       color: Color(0xFF5D3A1A),
@@ -197,51 +185,49 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-              const SizedBox(height: 20),
+            const SizedBox(height: 20),
 
+            const Text(
+              'Atau masuk menggunakan',
+              style: TextStyle(color: Color(0XFF706F6F), fontSize: 14),
+            ),
 
-              const Text(
-                'Atau masuk menggunakan',
-                style: TextStyle(color: Color(0XFF706F6F),fontSize: 14),
-              ),
+            const SizedBox(height: 12),
 
-              const SizedBox(height: 12),
-
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text ('Login dengan Google belom tersedia.')),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/image/google.png',
-                      width: 50,
-                      height: 50,
-                    ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Login dengan Google belom tersedia.'),
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/image/google.png',
+                    width: 50,
+                    height: 50,
                   ),
-                  const SizedBox(width: 20),
-                  GestureDetector(
-                    onTap: () {
-
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Login Facebook belum tersedia.')),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/image/facebook.png',
+                ),
+                const SizedBox(width: 20),
+                GestureDetector(
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Login Facebook belum tersedia.'),
+                      ),
+                    );
+                  },
+                  child: Image.asset(
+                    'assets/image/facebook.png',
                     width: 35,
                     height: 35,
-                    ),
                   ),
-                ],
-              ),
-
-              
+                ),
+              ],
+            ),
           ],
         ),
       ),
